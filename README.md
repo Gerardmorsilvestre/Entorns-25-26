@@ -1,2 +1,4 @@
 # Entorns-25-26
-Inicial
+Incial
+## Configuració GIThub VsCode
+Aquí configurem VSCode
