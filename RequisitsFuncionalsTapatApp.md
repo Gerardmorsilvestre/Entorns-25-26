@@ -25,13 +25,52 @@
 - "Part Pùblica. 
 
 ## Requisits funcionals RF i requisits No funcionals
-- RF1 : Login / Autentificació:
-    - Descripció: Tots els users entraran a partir del mail i contrasenya.
-    - Actors: Admin, metges, tutors, cuidadors i Infant.
+## RF
+<div class="alert alert-info">
+<h4> RF1: Registre </h4>
+<h5> Rol: Tutor </h5>
+<p> Com a Usuari Tutor vull poder registrar-me a l'aplicació amb correu electrònic, nom i password, per poder accedir-hi </p>
+</div>
 
-- RF2 : Resgistre Tutor:
-    - Descripció: Registrar a cadascu segons el seu rol dins de l'App.
-    - Actors: Admin, metges, tutors, cuidadors i Infant.
+<div class="alert alert-info">
+<h4> RF2: Login </h4>
+<h5> Rol: Tutor</h5>
+<p> Com a Usuari Tutor vyll comer accedir de forma segura a l'aplicació amb correu electrònic i password </p>
+</div>
 
-    Registre metges:
-    - 
+<div class="alert alert-info">
+<h4> RF3: Alta infantil </h4>
+<h5> Rol: Tutor </h5>
+<p> Com a Usuari Tutor vull poder registrar un infant per poder portar el control del Pegat </p>
+</div>
+
+<div class="alert alert-info">
+<h4> RF4: Control pegat infantil </h4>
+<h5> Rol: Tutor </h5>
+<p> Com a Usuari Tutor vull poder portar el control del Pegat. Quant de temps porta el pegat quan esta despert. </p>
+</div>
+
+<div class="alert alert-info">
+<h4> RF5: Control Tractament </h4>
+<h5> Rol: Tutor </h5>
+<p> Com a Usuari Tutor vull poder configurar el tipus de tractament de l'infant. Per temps fix o la meitat del temps que està despert. </p>
+</div>
+
+<div class="alert alert-info">
+<h4> RF6: Alta cuidador </h4>
+<h5> Rol: Tutor </h5>
+<p> Com a Usuari Tutor vull poder afegir cuidadors per a que puguin portar també el control del pegat </p>
+</div>
+
+<div class="alert alert-info">
+<h4> RF7: Cuidador control pegat </h4>
+<h5> Rol: Cuidador </h5>
+<p> Com a Usuari Cuidador vull poder portar el control del Pegat. Quant de temps porta el pegat quan esta despert. </p>
+</div>
+
+## NRF
+<div class="alert alert-info">
+<h4> RF1:  </h4>
+<h5> Rol:  </h5>
+<p> ... </p>
+</div>
