@@ -25,7 +25,7 @@
 - "Part Pùblica. 
 
 ## Requisits funcionals RF i requisits No funcionals
-## RF
+# RF
 <div class="alert alert-info">
 <h4> RF1: Registre </h4>
 <h5> Rol: Tutor </h5>
@@ -68,9 +68,27 @@
 <p> Com a Usuari Cuidador vull poder portar el control del Pegat. Quant de temps porta el pegat quan esta despert. </p>
 </div>
 
-## NRF
-<div class="alert alert-info">
-<h4> RF1:  </h4>
-<h5> Rol:  </h5>
-<p> ... </p>
+# RNF
+<div class="alert alert-info"> 
+  <h4> RNF1: Seguretat i privacitat </h4>
+  <h5> Rol: Usuari i administrador </h5>
+  <p> Les dades dels infants i del tractament han d’estar encriptades, amb accés restringit a persones autoritzades, i sense possibilitat de ser compartides amb tercers sense consentiment. </p>
+</div>
+
+<div class="alert alert-info"> 
+  <h4> RNF2: Usabilitat i accessibilitat </h4>
+  <h5> Rol: Usuari </h5>
+  <p> Interfície simple i intuïtiva, apta per persones amb dèficit visual o poc coneixement tecnològic, adaptable a diferents mides de pantalla i resolucions, i fàcil d’utilitzar per qualsevol cuidador. </p>
+</div>
+
+<div class="alert alert-info"> 
+  <h4> RNF3: Rendiment i eficiència </h4>
+  <h5> Rol: Usuari i dispositiu </h5>
+  <p> L'aplicació ha de ser lleugera, consumir pocs recursos del dispositiu (CPU, memòria, bateria) i processar càlculs i notificacions de manera ràpida i en temps real. </p>
+</div>
+
+<div class="alert alert-info"> 
+  <h4> RNF4: Mantenibilitat i escalabilitat </h4>
+  <h5> Rol: Desenvolupador </h5>
+  <p> Disseny modular que permet afegir noves funcionalitats, idiomes o integracions amb sistemes existents, amb facilitat per actualitzar i corregir errors sense afectar l’ús dels cuidadors. </p>
 </div>
