@@ -2,6 +2,8 @@
 Incial
 ## Requisits funcionals TapaApp
 
-[requisits Funcionals TapaApp] (RequisitsFuncionalsTapaApp)
+[RequisitsFuncionalsTapatApp](RequisitsFuncionalsTapatApp.md)
+
 ## Configuració GIThub VsCode
+
 Aquí configurem VSCode

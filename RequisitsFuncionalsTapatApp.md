@@ -24,11 +24,14 @@
 - Infant.
 - "Part Pùblica. 
 
-## Requisits funcionals i requisits ...
+## Requisits funcionals RF i requisits No funcionals
 - RF1 : Login / Autentificació:
-    - Descripció: Tots els users entraran a partir del mail i contrasenya
-    - Actors: Admin, metges, tutors i cuidadors
+    - Descripció: Tots els users entraran a partir del mail i contrasenya.
+    - Actors: Admin, metges, tutors, cuidadors i Infant.
 
-- RF2 : Resgistre Usuari:
-    - Descripció: 
-    - Actors: Admin, metges, tutors i cuidadors
+- RF2 : Resgistre Tutor:
+    - Descripció: Registrar a cadascu segons el seu rol dins de l'App.
+    - Actors: Admin, metges, tutors, cuidadors i Infant.
+
+    Registre metges:
+    - 
