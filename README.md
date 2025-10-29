@@ -1,8 +1,12 @@
 # Entorns-25-26
 Incial
-## Requisits funcionals TapaApp
+## Requisits Funcionals TapaApp
 
 [RequisitsFuncionalsTapatApp](RequisitsFuncionalsTapatApp.md)
+
+## Requisits Tècnics TapaApp
+
+[RequisitsTècnicsTapatApp](RequisitstècnicsTapatApp.md)
 
 ## Configuració GIThub VsCode
 

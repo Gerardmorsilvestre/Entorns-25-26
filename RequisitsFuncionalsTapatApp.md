@@ -92,3 +92,4 @@
   <h5> Rol: Desenvolupador </h5>
   <p> Disseny modular que permet afegir noves funcionalitats, idiomes o integracions amb sistemes existents, amb facilitat per actualitzar i corregir errors sense afectar l’ús dels cuidadors. </p>
 </div>
+
