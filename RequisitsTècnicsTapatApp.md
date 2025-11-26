@@ -1,7 +1,6 @@
 # Requisits Tècnics TapatApp
 
 ## Arquitectura
-[Client Servidor](charts/mvc-generic.mermaid)
 
 ## 1. Backend (Seridor i Gestió de Dades)
 El backend serà el cor del sistema, encarregat de gestionar dades, usuaris o la lògica del sistema.
