@@ -3,7 +3,6 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-
 # --- Ruta GET ---
 # Ejemplo: http://localhost:5000/saludo?nombre=Juan
 @app.route('/saludo', methods=['GET'])
