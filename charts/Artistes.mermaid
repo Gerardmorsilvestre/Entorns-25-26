@@ -1,0 +1,22 @@
+classDiagram
+    class Artista {
+        +int id
+        +string nom
+        +afegir_album(album)
+        +llistar_albums()
+    }
+
+    class Album {
+        +int id
+        +string títol
+        +date data_llançament
+    }
+
+    class `Canço` {
+        +int id
+        +string títol
+        +float durada
+    }
+
+    Artista "1" --> "*" Album : té / pertany a
+    Album "1" --> "*" `Canço` : conté / pertany a
