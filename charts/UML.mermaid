@@ -1,0 +1,56 @@
+classDiagram
+    direction BT
+    
+    %% Classe Base d'Usuari
+    class Usuari {
+        <<abstract>>
+        +String nom
+        +String email
+        -String contrasenya
+        +registrar()
+        +iniciarSessio(email, pass)
+        +tancarSessio()
+    }
+
+    %% Especialitzacions d'Usuari
+    class Client {
+        +List historialCompres
+        +cercarEsdeveniment(criteri)
+        +comprarEntrada(esdeveniment)
+        +cancelarReserva(entradaId)
+    }
+
+    class Administrador {
+        +int nivellPermisos
+        +crearEsdeveniment(dades)
+        +modificarEsdeveniment(id, dades)
+        +eliminarEsdeveniment(id)
+    }
+
+    %% Entitats del Sistema
+    class Esdeveniment {
+        +String nom
+        +String descripcio
+        +Date data
+        +String ubicacio
+        +int entradesDisponibles
+        +actualitzarStock()
+        +obtenirInfo()
+        +generarInformeVendes()
+    }
+
+    class Entrada {
+        +int id
+        +float preu
+        +String estat
+        +assignarPropietari(client)
+        +validarEntrada()
+        +canviarEstat(nouEstat)
+    }
+
+    %% Relacions
+    Client --|> Usuari : hereta
+    Administrador --|> Usuari : hereta
+    Administrador "1" --> "*" Esdeveniment : gestiona
+    Esdeveniment "1" *-- "1..*" Entrada : conté (composició)
+    Client "1" o-- "*" Entrada : posseeix (agregació)
