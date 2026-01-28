@@ -1,7 +1,29 @@
 classDiagram
     direction TB
 
-    %% Classe Base d'Usuari
+    %% 1. EL PRODUCTE (L'eix central)
+    class Entrada {
+        +int id
+        +float preu
+        +String estat
+        +assignarPropietari(client)
+        +validarEntrada()
+        +canviarEstat(nouEstat)
+    }
+
+    %% 2. EL CONTEXT (On existeix el producte)
+    class Esdeveniment {
+        +String nom
+        +String descripcio
+        +Date data
+        +String ubicacio
+        +int entradesDisponibles
+        +actualitzarStock()
+        +obtenirInfo()
+        +generarInformeVendes()
+    }
+
+    %% 3. ELS ACTORS (Qui interactua amb el sistema)
     class Usuari {
         <<abstract>>
         +String nom
@@ -12,7 +34,6 @@ classDiagram
         +tancarSessio()
     }
 
-    %% Especialitzacions d'Usuari
     class Client {
         +List historialCompres
         +cercarEsdeveniment(criteri)
@@ -27,30 +48,9 @@ classDiagram
         +eliminarEsdeveniment(id)
     }
 
-    %% Entitats del Sistema
-    class Esdeveniment {
-        +String nom
-        +String descripcio
-        +Date data
-        +String ubicacio
-        +int entradesDisponibles
-        +actualitzarStock()
-        +obtenirInfo()
-        +generarInformeVendes()
-    }
-
-    class Entrada {
-        +int id
-        +float preu
-        +String estat
-        +assignarPropietari(client)
-        +validarEntrada()
-        +canviarEstat(nouEstat)
-    }
-
-    %% Relacions
-    Usuari <|-- Client : hereta
-    Usuari <|-- Administrador : hereta
-    Administrador "1" --> "*" Esdeveniment : gestiona
-    Esdeveniment "1" *-- "1..*" Entrada : conté (composició)
-    Client "1" o-- "*" Entrada : posseeix (agregació)
+    %% Relacions organitzades per dependència
+    Esdeveniment "1" *-- "1..*" Entrada : genera
+    Client "1" o-- "*" Entrada : compra/posseeix
+    Administrador "1" --> "*" Esdeveniment : controla
+    Usuari <|-- Client
+    Usuari <|-- Administrador
