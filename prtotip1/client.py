@@ -44,3 +44,8 @@ u=daoUserClient.getUserByUsername("rob")
 print(u)
 u=daoUserClient.getUserByUsername("Not exist")
 print(u)
+
+# TO-DO Menú veure tots els usuaris, consultar usuari, add User i Exit
+view=ViewConsole()
+data=view.getInputUsername()
+view.showUserInfo(data)

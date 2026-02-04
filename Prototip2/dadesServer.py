@@ -1,11 +1,12 @@
 # Dades d'exemple amb List 
 # Clase User 
 class User:
-    def __init__(self, id, username, password, email):
+    def __init__(self, id, username, password, email, idrole):
         self.id = id
         self.username = username
         self.password = password
         self.email = email
+        self.idrole = id
     
     def __str__(self):
         return self.username + ":" + self.password + ":" + self.email
@@ -49,8 +50,8 @@ class Treatment:
 
 
 users = [
-    User(id=1, username="mare", password="12345", email="prova@gmail.com"),
-    User(id=2, username="pare", password="123", email="prova2@gmail.com")
+    User(id=1, username="mare", password="12345", email="prova@gmail.com", idrole=1),
+    User(id=2, username="pare", password="123", email="prova2@gmail.com", idrole=1)
 ]
 
 # Crear les classes Child, Tap, Role, Status i Treatment
@@ -83,7 +84,7 @@ roles = [
 statuses = [
     Status(id=1, name="sleep"),
     Status(id=2, name="awake yes_eyepatch"),
-    Status(id=2, name="awake no_eyepatch")
+    Status(id=3, name="awake no_eyepatch")
 ]
 
 treatments = [
