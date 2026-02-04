@@ -1,0 +1,54 @@
+classDiagram
+    class User {
+        +int id
+        +string username
+        +string password
+        +string email
+        +int idrole
+        +__str__() string
+    }
+
+    class Child {
+        +int id
+        +string child_name
+        +int sleep_average
+        +int treatment_id
+        +int time
+    }
+
+    class Tap {
+        +int id
+        +int child_id
+        +int status_id
+        +int user_id
+        +datetime init
+        +datetime end
+    }
+
+    class UserDAO {
+        <<interface>>
+        +get_all() List~User~
+        +get_by_id(id) User
+        +insert(user) bool
+        +update(id, user) bool
+        +delete(id) bool
+    }
+
+    class ChildDAO {
+        <<interface>>
+        +get_all() List~Child~
+        +get_by_id(id) Child
+        +get_by_user(user_id) List~Child~
+        +insert(child) bool
+    }
+
+    class TapDAO {
+        <<interface>>
+        +get_all() List~Tap~
+        +get_by_child(child_id) List~Tap~
+        +insert(tap) bool
+    }
+
+    UserDAO ..> User : manipulates
+    ChildDAO ..> Child : manipulates
+    TapDAO ..> Tap : manipulates

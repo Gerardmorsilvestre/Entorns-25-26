@@ -36,12 +36,13 @@ class UserDao:
     def getAllUsers(self):
         return [user.__dict__ for user in self.users]
         #return self.users
+
 # Test DAO
 
 user_dao = UserDao()
 a=user_dao.getAllUsers()
 print(a)
-response=user_dao.getUserByUsername("maria")
+response=user_dao.getUserByUsername("Maria")
 print(response)
 response=user_dao.getUserByUsername("AAAA")
 print(response)
