@@ -1,3 +1,0 @@
-#Crud, login, autologin (token)
-
-    

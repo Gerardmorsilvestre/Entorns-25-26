@@ -1,12 +1,13 @@
 # Dades d'exemple amb List 
 # Clase User 
 class User:
-    def __init__(self, id, username, password, email, idrole):
+    def __init__(self, id, username, password, email, idrole,token):
         self.id = id
         self.username = username
         self.password = password
         self.email = email
         self.idrole = id
+        self.token = token
     
     def __str__(self):
         return self.username + ":" + self.password + ":" + self.email
@@ -22,13 +23,12 @@ class Child:
 
 # Clase Tap
 class Tap:
-    def __init__(self, id, child_id, status_id, user_id, init, end):
+    def __init__(self, id, child_id, status_id, user_id, init):
         self.id = id
         self.child_id = child_id
         self.status_id = status_id
         self.user_id = user_id
         self.init = init
-        self.end = end
 
 # Clase Status
 class Status:
@@ -50,8 +50,8 @@ class Treatment:
 
 
 users = [
-    User(id=1, username="mare", password="12345", email="prova@gmail.com", idrole=1),
-    User(id=2, username="pare", password="123", email="prova2@gmail.com", idrole=1)
+    User(id=1, username="mare", password="12345", email="prova@gmail.com", idrole=1, token=""),
+    User(id=2, username="pare", password="123", email="prova2@gmail.com", idrole=1, token="")
 ]
 
 # Crear les classes Child, Tap, Role, Status i Treatment
@@ -62,8 +62,8 @@ children = [
 ]
 
 taps = [
-    Tap(id=1, child_id=1, status_id=1, user_id=1, init="2024-12-18T19:42:43", end="2024-12-18T20:42:43"),
-    Tap(id=2, child_id=2, status_id=2, user_id=2, init="2024-12-18T21:42:43", end="2024-12-18T22:42:43")
+    Tap(id=1, child_id=1, status_id=1, user_id=1, init="2024-12-18T19:42:43"),
+    Tap(id=2, child_id=2, status_id=2, user_id=2, init="2024-12-18T21:42:43")
 ]
 
 relation_user_child = [
