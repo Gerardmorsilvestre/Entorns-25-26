@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from DaoServer import UserDAO
+from DAOServer import UserDAO
 from dataclasses import dataclass, asdict
 
 @dataclass
@@ -45,7 +45,7 @@ def login():
         response = ApiResponse(
             msg="Not authenticated",
             coderesponse="0",
-            data=""
+            data=user
         )
     return jsonify(asdict(response)),200
 
