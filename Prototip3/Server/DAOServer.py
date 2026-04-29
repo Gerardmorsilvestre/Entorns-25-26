@@ -80,8 +80,29 @@ class UserDAO:
 
 class ChildDAO:
 
+    def connectBBDD(self):
+        connection = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="root",
+            database="tapatapp"
+        )
+        return connection
+
     def getChilds(self,id_user):
-        return  "TO-DO Get Childs"
+        con=self.connectBBDD()
+        cursor = con.cursor(dictionary=True)
+        query = "SELECT distinct child. * FROM RelationUserChild,Child WHERE RelationUserChild.user_id='"
+        query += id_user + "' and RelationUserChild.child_id=child.id"""
+        cursor.execute(query)
+        results = cursor.fetchall()
+        cursor.close()
+        con.close()
+        return  results
+
+cdao=ChildDAO
+res=cdao.getChilds("1")
+print(res)
    
 '''
 dao=UserDAO()
