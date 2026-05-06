@@ -47,30 +47,68 @@ def login():
 @app.route('/child', methods=['POST'])
 def child():
     token=request.headers.get("api-token")
-    user=None
+    u=None
     if(token):
         # comprovar que el token existeix a un usuari
-        user=userDao.getUserByToken(token)
+        print(token)
+        u=userDao.getUserByToken(token)
+        print("USER:", u)
     
-    if not user:
+    if u:
+        #data = request.get_json()
+        childs=childDao.getChilds(str(u['id']))
+        response = ApiResponse(
+                msg="GetChilds",
+                coderesponse="1",
+                data=childs
+            )
+        return jsonify(asdict(response)),200
+    else: 
         response = ApiResponse(
             msg="Acces not granted",
             coderesponse="0",
             data=""
         )
         return jsonify(asdict(response)),400
+    
+@app.route('/taps', methods=['POST']) 
+def taps():
+    token = request.headers.get("api-token")
+    u = None
+    
+    if token:
+        print(f"TOKEN RECIBIDO: {token}")
+        u = userDao.getUserByToken(token)
+        print("USER:", u)
+    
+    if u:
+        data = request.get_json()
+        id_child = data.get('id_child')
+        
+        if not id_child:
+            response = ApiResponse(
+                msg="Missing id_child",
+                coderesponse="0",
+                data=""
+            )
+            return jsonify(asdict(response)), 400
 
-    data = request.get_json()
-    childs=childDao.getChilds(user['id'])
-    response = ApiResponse(
-            msg="getChilds",
+        taps_records = childDao.getTaps(str(u['id']), str(id_child))
+        
+        response = ApiResponse(
+            msg="GetTaps",
             coderesponse="1",
-            data=childs
+            data=taps_records
         )
-    return jsonify(asdict(response)),200
-
-
-
+        return jsonify(asdict(response)), 200
+    
+    else: 
+        response = ApiResponse(
+            msg="Acces not granted",
+            coderesponse="0",
+            data=""
+        )
+        return jsonify(asdict(response)), 401
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

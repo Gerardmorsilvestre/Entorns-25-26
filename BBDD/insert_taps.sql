@@ -1,0 +1,10 @@
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 1, 1, '2026-05-04 08:00:00');
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 2, 1, '2026-05-04 08:10:00');
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 3, 1, '2026-05-04 08:20:00');
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 4, 1, '2026-05-04 08:30:00');
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 1, 1, '2026-05-04 08:40:00');
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 2, 1, '2026-05-04 08:50:00');
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 3, 1, '2026-05-04 09:00:00');
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 4, 1, '2026-05-04 09:10:00');
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 1, 1, '2026-05-04 09:20:00');
+INSERT INTO `Tap` (`child_id`, `status_id`, `user_id`, `init`) VALUES (1, 2, 1, '2026-05-04 09:30:00');

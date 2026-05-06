@@ -92,19 +92,35 @@ class ChildDAO:
     def getChilds(self,id_user):
         con=self.connectBBDD()
         cursor = con.cursor(dictionary=True)
-        query = "SELECT distinct child. * FROM RelationUserChild,Child WHERE RelationUserChild.user_id='"
-        query += id_user + "' and RelationUserChild.child_id=child.id"""
+        query = "SELECT distinct  Child.* FROM RelationUserChild,Child WHERE RelationUserChild.user_id='"
+        query += id_user + "' and RelationUserChild.child_id=Child.id"""
         cursor.execute(query)
         results = cursor.fetchall()
         cursor.close()
         con.close()
         return  results
+    
+    def getTaps(self, id_user, id_child):
+        con = self.connectBBDD()
+        cursor = con.cursor(dictionary=True)
+        query = """
+            SELECT Tap.*, User.username, User.email
+            FROM Tap
+            JOIN User ON Tap.user_id = User.id
+            WHERE Tap.user_id = %s AND Tap.child_id = %s
+        """
+        cursor.execute(query, (id_user, id_child))
+        results = cursor.fetchall()
+        cursor.close()
+        con.close()
+        return results
 
-cdao=ChildDAO
+
+
+'''
+cdao=ChildDAO()
 res=cdao.getChilds("1")
 print(res)
-   
-'''
 dao=UserDAO()
 u=dao.getUserByToken("5b8656c4f2dc8461550dc44543e4fdb23a481c1d76fcf2e1353fe5425f50ee40")
 print(u)
